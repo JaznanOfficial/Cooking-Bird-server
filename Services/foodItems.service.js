@@ -5,3 +5,8 @@ exports.getFoodItemsService = async (filter) => {
     console.log(result);
     return result;
 };
+exports.postFoodItemsService = async (data) => {
+    const result = await FoodItems.create(data);
+    console.log(result);
+    return result;
+};
