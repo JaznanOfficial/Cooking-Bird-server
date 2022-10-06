@@ -6,7 +6,7 @@ const dbConnect = () => {
         dbName:"cooking-bird"
     })
         .then(() => {
-        console.log('db connected successfully'.white.bgGreen.bold)
+        console.log('db connected successfully'.bgGreen.white.bold)
         }).catch((err) => {
         console.log(err.message);
     })

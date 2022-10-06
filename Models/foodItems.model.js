@@ -2,30 +2,35 @@ const mongoose = require("mongoose");
 
 const foodItemsSchema = mongoose.Schema({
     name: {
+        required:true,
         unique: true,
         type: String,
         max: 20,
         min:3
     },
     category: {
+        required:true,
         type: String,
-        unique: true,
-        enum:["dessert","fast food","breakfast", "lunch","dinner","special"]
     },
     area: {
+        required:true,
         type: String,
 
     },
     items: {
+        required:true,
         type: String
     },
     img: {
+        required:true,
         type: String
     },
     rating: {
+        required:true,
         type: Number
     },
     price: {
+        required:true,
         type: Number
     }
 })
