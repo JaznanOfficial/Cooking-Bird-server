@@ -34,7 +34,7 @@ const usersSchema = mongoose.Schema({
         type: String,
         validate: {
             validator: (value) => {
-                return validator.isMobilePhone(value, ["bn-BD"[{ strictMode: true }]]);
+                return validator.isMobilePhone(value, ["bn-BD"]);
             },
         },
         maxLength: 14,
