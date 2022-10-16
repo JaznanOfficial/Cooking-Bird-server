@@ -11,6 +11,12 @@ const postUsersService = async (data) => {
     return result;
 };
 
+const deleteUsersService = async() => {
+    const result = await Users.remove({})
+    console.log(result);
+    return result;
+}
 
 
-module.exports={getUsersService, postUsersService}
+
+module.exports={getUsersService, postUsersService, deleteUsersService}

@@ -3,13 +3,13 @@ var validator = require("validator");
 
 const usersSchema = mongoose.Schema({
     name: {
+        type: String,
         required: [true, "Name is required"],
-        type: [String, "Please name must be string"],
     },
     email: {
+        type: String,
         required: [true, "Email is required"],
         unique: [true, "Email must be unique"],
-        type: String,
         validate: [validator.isEmail, "Please provide a valid email"],
     },
     img: {

@@ -1,5 +1,5 @@
 const express = require('express');
-const { getUsersService, postUsersService } = require('../Services/users.service');
+const { getUsersService, postUsersService, deleteUsersService } = require('../Services/users.service');
 
 
 const getUsersController = async (req, res) => {
@@ -7,6 +7,12 @@ const getUsersController = async (req, res) => {
         const query = req.query;
         // console.log(query);
         const users = await getUsersService(query);
+        console.log(users.length);
+        if (users.length === 0) {
+            return res.status(200).json({
+                message:"You've no data. please insert first then find data"
+            })
+        }
         res.status(200).json({
             status: "Successful",
             message: "Data found successfully",
@@ -32,5 +38,20 @@ const postUsersController = async (req, res) => {
     }
 };
 
+const deleteUsersController = async (req, res) => {
+    try {
+        const query = req.query;
+        // console.log(query);
+        const users = await deleteUsersService();
+        console.log(users)
+        res.status(200).json({
+            status: "Successful",
+            message: "Data delete successfully",
+        })
+    } catch (error) {
+        res.json(error)
+    }
+};
 
-module.exports={getUsersController, postUsersController}
+
+module.exports={getUsersController, postUsersController,deleteUsersController}
