@@ -11,8 +11,8 @@ const postUsersService = async (data) => {
     return result;
 };
 
-const deleteUsersService = async() => {
-    const result = await Users.remove({})
+const deleteUsersService = async(query) => {
+    const result = await Users.remove(query)
     console.log(result);
     return result;
 }

@@ -6,7 +6,7 @@ const foodItemsSchema = mongoose.Schema({
         required:true,
         unique: true,
         type: String,
-        maxLength: 20,
+        maxLength: 30,
         minLength:3
     },
     category: {

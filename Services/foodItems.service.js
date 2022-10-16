@@ -10,3 +10,8 @@ exports.postFoodItemsService = async (data) => {
     console.log(result);
     return result;
 };
+exports.deleteFoodItemsService = async(query) => {
+    const result = await FoodItems.remove(query)
+    console.log(result);
+    return result;
+}

@@ -42,7 +42,7 @@ const deleteUsersController = async (req, res) => {
     try {
         const query = req.query;
         // console.log(query);
-        const users = await deleteUsersService();
+        const users = await deleteUsersService(query);
         console.log(users)
         res.status(200).json({
             status: "Successful",

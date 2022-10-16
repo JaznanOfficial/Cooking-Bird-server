@@ -14,7 +14,6 @@ const foodItemsRoute = require('./Routes/foodItems.route')
 const usersRoute = require('./Routes/users.route')
 
 app.use('/api/v1/foodItems', foodItemsRoute)
-
 app.use('/api/v1/users',usersRoute)
 
 
