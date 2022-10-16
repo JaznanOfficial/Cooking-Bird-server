@@ -1,16 +1,21 @@
 const mongoose = require("mongoose");
+var validator = require('validator');
 
 const foodItemsSchema = mongoose.Schema({
     name: {
         required:true,
         unique: true,
         type: String,
-        max: 20,
-        min:3
+        maxLength: 20,
+        minLength:3
     },
     category: {
         required:true,
         type: String,
+        enum: {
+            values: ["dessert", "fast-food", "special", "breakfast", "lunch", "dinner"],
+            message:"{VALUE} isn't supported"
+        }
     },
     area: {
         required:true,
@@ -23,7 +28,8 @@ const foodItemsSchema = mongoose.Schema({
     },
     img: {
         required:true,
-        type: String
+        type: String,
+        validate:[validator.isURL,"Please provide an url"]
     },
     rating: {
         required:true,
