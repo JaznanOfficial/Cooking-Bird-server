@@ -11,7 +11,13 @@ exports.postFoodItemsService = async (data) => {
     return result;
 };
 exports.deleteFoodItemsService = async(query) => {
-    const result = await FoodItems.remove(query)
+    const result = await FoodItems.deleteMany(query)
+    console.log(result);
+    return result;
+}
+
+exports.updateFoodItemsService = async(query,data) => {
+    const result = await FoodItems.updateOne(query,data)
     console.log(result);
     return result;
 }
