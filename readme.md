@@ -2,7 +2,7 @@
 
 ## Here is the api route and api details. 
 
-<!-- Users api:  -->
+* ## *Users Api*
 
 ## post->
 *api/v1/users* it'll post single or multiple data
@@ -23,7 +23,7 @@
 
 
 
-<!-- food items api:  -->
+* ## *Food Items Api*
 
 ## post->
 *api/v1/foodItems* it'll post single or multiple data
