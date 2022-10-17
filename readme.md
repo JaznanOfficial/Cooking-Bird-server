@@ -6,7 +6,7 @@ Main Root- (https://cooking-bird-server.onrender.com/)
 * ## *Users Api*
 
 #### post
-*api/v1/users* it'll post single or multiple data
+*api/v1/users* - it'll post single or multiple data
 
 #### get
 *api/v1/users* - it'll get all data
@@ -27,7 +27,7 @@ Main Root- (https://cooking-bird-server.onrender.com/)
 * ## *Food Items Api*
 
 #### post
-*api/v1/foodItems* it'll post single or multiple data
+*api/v1/foodItems* - it'll post single or multiple data
 
 #### get
 *api/v1/foodItems* - it'll get all data
