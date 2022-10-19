@@ -59,3 +59,39 @@ Main Root- (https://cooking-bird-server.onrender.com/)
 #### patch
 *api/v1/addresses* - it'll update all data
 *api/v1/addresses?property=value* - it'll update specified data
+
+
+* ## *Carts Api*
+
+#### post
+*api/v1/carts* - it'll post single or multiple data
+
+#### get
+*api/v1/carts* - it'll get all data
+*api/v1/carts?property=value* - it'll get specified data
+
+#### delete
+*api/v1/carts* - it'll delete all data
+*api/v1/carts?property=value* - it'll delete specified data
+
+#### patch
+*api/v1/carts* - it'll update all data
+*api/v1/carts?property=value* - it'll update specified data
+
+
+* ## *Orders Api*
+
+#### post
+*api/v1/orders* - it'll post single or multiple data
+
+#### get
+*api/v1/orders* - it'll get all data
+*api/v1/orders?property=value* - it'll get specified data
+
+#### delete
+*api/v1/orders* - it'll delete all data
+*api/v1/orders?property=value* - it'll delete specified data
+
+#### patch
+*api/v1/orders* - it'll update all data
+*api/v1/orders?property=value* - it'll update specified data
