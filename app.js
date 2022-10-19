@@ -13,12 +13,14 @@ app.use(express.json())
 const foodItemsRoute = require('./Routes/foodItems.route')
 const usersRoute = require('./Routes/users.route')
 const addressesRoute = require('./Routes/addresses.route')
-const ordersRoute = require('./Routes/orders.route')
+const ordersRoute = require('./Routes/orders.route') 
+const cartsRoute = require('./Routes/carts.route') 
 
 app.use('/api/v1/foodItems', foodItemsRoute)
 app.use('/api/v1/users',usersRoute)
 app.use('/api/v1/addresses',addressesRoute)
 app.use('/api/v1/orders',ordersRoute)
+app.use('/api/v1/carts',cartsRoute)
 
 
 

@@ -1,18 +1,17 @@
 [
   {
-    "name":"Biryani",
-  "email":"abc@gmail.com",
-  "img":"https://www.spiceupthecurry.com/wp-content/uploads/2015/12/homemade-yogurt-recipe-7.jpg",
-  "price":350,
-  "quantity":2,
-  "phone":"+880164328214"
-},
-{
-  "name":"Burger",
-  "email":"abdullah@gmail.com",
-  "img":"https://www.spiceupthecurry.com/wp-content/uploads/2015/12/homemade-yogurt-recipe-7.jpg",
-  "price":300,
-  "quantity":5,
-  "phone":"+8801643282147"
-}
-]
+  
+  "name": "Burger",
+  "email": "jaznanofficial@gmail.com",
+  "img": "https://www.spiceupthecurry.com/wp-content/uploads/2015/12/homemade-yogurt-recipe-7.jpg",
+  "quantity": 5,
+  "price": 300
+  },
+  {
+  "name": "Biryani",
+  "email": "abc@gmail.com",
+  "img": "https://www.spiceupthecurry.com/wp-content/uploads/2015/12/homemade-yogurt-recipe-7.jpg",
+  "quantity": 2,
+  "price": 350
+  }
+  ]

@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 var validator = require("validator");
 
-const ordersSchema = mongoose.Schema({
+const cartsSchema = mongoose.Schema({
     name: {
         type: String,
         required: [true, "Name is required"],
     },
     email: {
+        unique:false,
         type: String,
         required: [true, "Email is required"],
-        unique: [false,],
         validate: [validator.isEmail, "Please provide a valid email"],
     },
     img: {
@@ -25,19 +25,19 @@ const ordersSchema = mongoose.Schema({
         required: true,
       type:Number,  
     },
-    status: {
-        // required: true,
-        type: String,
-        enum: {
-            values: ["pending", "processing", "on the way","delivered"],
-            message: "{VALUE} isn't valid. please select 'pending', 'processing','on the way' or 'delivered' ",
-        },
-    },
+    // status: {
+    //     // required: true,
+    //     type: String,
+    //     enum: {
+    //         values: ["pending", "processing", "on the way","delivered"],
+    //         message: "{VALUE} isn't valid. please select 'pending', 'processing','on the way' or 'delivered' ",
+    //     },
+    // },
     
 }, {
     timestamps: true
 });
 
-const Orders = mongoose.model("orders", ordersSchema);
+const Carts = mongoose.model("carts", cartsSchema);
 
-module.exports = Orders;
+module.exports = Carts;
