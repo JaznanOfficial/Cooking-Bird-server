@@ -7,12 +7,11 @@ const getAddressService = async (query) => {
 };
 const postAddressService = async (data) => {
     const result = await Addresses.create(data);
-    console.log(result);
     return result;
 };
 
 const deleteAddressService = async(query) => {
-    const result = await Addresses.deleteOne(query)
+    const result = await Addresses.deleteMany(query)
     console.log(result);
     return result;
 }

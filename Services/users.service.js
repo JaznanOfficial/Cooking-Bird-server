@@ -12,7 +12,7 @@ const postUsersService = async (data) => {
 };
 
 const deleteUsersService = async(query) => {
-    const result = await Users.deleteOne(query)
+    const result = await Users.deleteMany(query)
     console.log(result);
     return result;
 }
