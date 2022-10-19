@@ -3,15 +3,15 @@ const {
     postOrdersService,
     deleteOrdersService,
     updateOrdersService,
-} = require("../Services/addresses.service");
+} = require("../Services/orders.service");
 
-const getAddressController = async (req, res) => {
+const getOrdersController = async (req, res) => {
     try {
         const query = req.query;
         // console.log(query);
-        const addresses = await getOrdersService(query);
-        console.log(addresses);
-        if (addresses.length === 0) {
+        const orders = await getOrdersService(query);
+        console.log(orders);
+        if (orders.length === 0) {
             return res.status(200).json({
                 message: "You've no data or entered a wrong queries. please insert first then find data or check your queries",
             });
@@ -19,17 +19,17 @@ const getAddressController = async (req, res) => {
         res.status(200).json({
             status: "Successful",
             message: "Data found successfully",
-            data: addresses,
+            data: orders,
         });
     } catch (error) {
         res.json(error);
     }
 };
-const postAddressController = async (req, res) => {
+const postOrdersController = async (req, res) => {
     try {
         const data = req.body;
-        const addresses = await postOrdersService(data);
-        console.log(addresses);
+        const orders = await postOrdersService(data);
+        console.log(orders);
         res.status(200).json({
             status: "Successful",
             message: "Data added successfully",
@@ -39,19 +39,19 @@ const postAddressController = async (req, res) => {
     }
 };
 
-const deleteAddressController = async (req, res) => {
+const deleteOrdersController = async (req, res) => {
     try {
         const query = req.query;
         // console.log(query);
-        const addresses = await deleteOrdersService(query);
-        console.log(addresses);
-        if (addresses.acknowledged && !addresses.deletedCount) {
+        const orders = await deleteOrdersService(query);
+        console.log(orders);
+        if (orders.acknowledged && !orders.deletedCount) {
             return res.status(404).json({
                 status: "Failed",
                 message: "We didn't find any user to delete.",
             });
         }
-        else if (addresses.acknowledged && addresses.deletedCount) {
+        else if (orders.acknowledged && orders.deletedCount) {
             
             return res.status(200).json({
                 status: "Successful",
@@ -66,20 +66,20 @@ const deleteAddressController = async (req, res) => {
         res.json(error);
     }
 };
-const updateAddressController = async (req, res) => {
+const updateOrdersController = async (req, res) => {
     try {
         const query = req.query;
         const data = req.body;
         // console.log(query);
-        const addresses = await updateOrdersService(query, data);
-        console.log(addresses);
-        if (addresses.acknowledged && !addresses.matchedCount) {
+        const orders = await updateOrdersService(query, data);
+        console.log(orders);
+        if (orders.acknowledged && !orders.matchedCount) {
             return res.status(404).json({
                 status: "Failed",
                 message: "We didn't find any user to update.",
             });
         }
-        else if (addresses.matchedCount && addresses.modifiedCount) {
+        else if (orders.matchedCount && orders.modifiedCount) {
             
             return res.status(200).json({
                 status: "Successful",
@@ -96,8 +96,8 @@ const updateAddressController = async (req, res) => {
 };
 
 module.exports = {
-    getAddressController,
-    postAddressController,
-    deleteAddressController,
-    updateAddressController,
+    getOrdersController,
+    postOrdersController,
+    deleteOrdersController,
+    updateOrdersController,
 };
