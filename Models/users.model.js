@@ -18,11 +18,11 @@ const usersSchema = mongoose.Schema({
         validate: [validator.isURL, "Please provide an URL"],
     },
     profession: {
-        required: true,
+        // required: true,
         type: String,
     },
     gender: {
-        required: true,
+        // required: true,
         type: String,
         enum: {
             values: ["male", "female", "other"],
@@ -30,7 +30,7 @@ const usersSchema = mongoose.Schema({
         },
     },
     phone: {
-        required: true,
+        // required: true,
         type: String,
         validate: {
             validator: (value) => {

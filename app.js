@@ -12,9 +12,11 @@ app.use(express.json())
 
 const foodItemsRoute = require('./Routes/foodItems.route')
 const usersRoute = require('./Routes/users.route')
+const addressesRoute = require('./Routes/addresses.route')
 
 app.use('/api/v1/foodItems', foodItemsRoute)
 app.use('/api/v1/users',usersRoute)
+app.use('/api/v1/addresses',addressesRoute)
 
 
 
