@@ -15,12 +15,14 @@ const usersRoute = require('./Routes/users.route')
 const addressesRoute = require('./Routes/addresses.route')
 const ordersRoute = require('./Routes/orders.route') 
 const cartsRoute = require('./Routes/carts.route') 
+const bookTableRoute = require('./Routes/bookTable.route') 
 
 app.use('/api/v1/foodItems', foodItemsRoute)
 app.use('/api/v1/users',usersRoute)
 app.use('/api/v1/addresses',addressesRoute)
 app.use('/api/v1/orders',ordersRoute)
 app.use('/api/v1/carts',cartsRoute)
+app.use('/api/v1/bookTable',bookTableRoute)
 
 
 
