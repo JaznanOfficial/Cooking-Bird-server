@@ -95,3 +95,22 @@ Main Root- (https://cooking-bird-server.onrender.com/)
 #### patch
 *api/v1/orders* - it'll update all data
 *api/v1/orders?property=value* - it'll update specified data
+
+
+
+* ## *Booking Table Api*
+
+#### post
+*api/v1/bookTable* - it'll post single or multiple data
+
+#### get
+*api/v1/bookTable* - it'll get all data
+*api/v1/bookTable?property=value* - it'll get specified data
+
+#### delete
+*api/v1/bookTable* - it'll delete all data
+*api/v1/bookTable?property=value* - it'll delete specified data
+
+#### patch
+*api/v1/bookTable* - it'll update all data
+*api/v1/bookTable?property=value* - it'll update specified data
