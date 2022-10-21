@@ -1,5 +1,5 @@
 ## Welcome to *Cooking Bird Server*
-Main Root- (https://cooking-bird-server.onrender.com/)
+Main Root- (https://cooking-bird-server-production.up.railway.app/)
 
 ### Here is the api route and api details. 
 
