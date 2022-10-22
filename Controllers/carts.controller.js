@@ -16,11 +16,7 @@ const getCartsController = async (req, res) => {
                 message: "You've no data or entered a wrong queries. please insert first then find data or check your queries",
             });
         }
-        res.status(200).json({
-            status: "Successful",
-            message: "Data found successfully",
-            data: carts,
-        });
+        return res.status(200).json(carts);
     } catch (error) {
         res.json(error);
     }

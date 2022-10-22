@@ -12,11 +12,7 @@ const getFoodItemsController = async (req, res) => {
                 message:"You've no data. please insert first then find data"
             })
         }
-        res.status(200).json({
-            status: "Successful",
-            message: "Data found successfully",
-            data: foodItems
-        })
+        return res.status(200).json(foodItems)
     } catch (error) {
         res.json(error)
     }
@@ -80,10 +76,7 @@ const updateFoodItemsController = async (req, res) => {
         }
         else if (foodItems.matchedCount && foodItems.modifiedCount) {
             
-            return res.status(200).json({
-                status: "Successful",
-                message: "Data update successfully",
-            });
+            return res.status(200).json(foodItems);
         }
         return res.status(500).json({
             status: "Failed",

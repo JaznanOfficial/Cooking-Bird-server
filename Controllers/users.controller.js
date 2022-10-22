@@ -17,11 +17,7 @@ const getUsersController = async (req, res) => {
                 message: "You've no data or entered a wrong queries. please insert first then find data or check your queries",
             });
         }
-        res.status(200).json({
-            status: "Successful",
-            message: "Data found successfully",
-            data: users,
-        });
+        return res.status(200).json(users);
     } catch (error) {
         res.json(error);
     }
