@@ -41,7 +41,7 @@ const usersSchema = mongoose.Schema({
         minLength: 14,
     },
     role: {
-        required: true,
+        // required: true,
         type: String,
         enum: {
             values: ["admin", "moderator", "user"],
@@ -49,7 +49,7 @@ const usersSchema = mongoose.Schema({
         }
     },
     status: {
-        required: true,
+        // required: true,
         type: String,
         enum: {
             values: ["active", "blocked"],
