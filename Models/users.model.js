@@ -13,7 +13,7 @@ const usersSchema = mongoose.Schema({
         validate: [validator.isEmail, "Please provide a valid email"],
     },
     img: {
-        // required: true,
+        
         type: String,
         validate: [validator.isURL, "Please provide an URL"],
     },
